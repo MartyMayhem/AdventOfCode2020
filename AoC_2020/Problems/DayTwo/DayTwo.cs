@@ -8,9 +8,13 @@ namespace AoC_2020.Problems.DayTwo
 {
    public static class DayTwo
     {
-        public static string ValidPasswordCount(string[] passwords)
+        public static string ValidPasswordCountProblemOne(string[] passwords)
         {
-            return FileReadHelper.ReadPasswordFile(passwords).Where(r => r.isValidPassword == true).Count().ToString();
+            return FileReadHelper.ReadPasswordFile(passwords).Where(r => r.isValidPasswordProblemOne == true).Count().ToString();
+        }
+        public static string ValidPasswordCountProblemTwo(string[] passwords)
+        {
+            return FileReadHelper.ReadPasswordFile(passwords).Where(r => r.IsCharacterInCorrectPlace == true).Count().ToString();
         }
     }
 }
