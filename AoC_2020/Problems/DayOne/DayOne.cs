@@ -39,11 +39,11 @@ namespace AoC_2020.Problems.DayOne
             {
                 for (var j = i + 1; j < lines.Length; j++)
                 {
-                    for(var k = i+2; k<lines.Length; k++)
+                    for(var k = j+1; k<lines.Length; k++)
                     {
                         if (long.Parse(lines[j]) + long.Parse(lines[i]) + long.Parse(lines[k]) == 2020)
                         {
-                            long multipledValue = long.Parse(lines[j]) * long.Parse(lines[i]) * long.Parse(lines[i]);
+                            long multipledValue = long.Parse(lines[j]) * long.Parse(lines[i]) * long.Parse(lines[k]);
                             if (multipledValue > LargestMultipledValue)
                             {
                                 LargestMultipledValue = multipledValue;
